@@ -1,0 +1,6 @@
+FROM ubuntu
+MAINTAINER Balan
+RUN apt-get update
+RUN apt-get install python3 -y
+COPY HelloWorld.py /
+CMD ["/bin/sh","-c","python3 HelloWorld.py"]

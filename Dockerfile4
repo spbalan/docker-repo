@@ -1,0 +1,7 @@
+FROM ubuntu
+MAINTAINER Balan
+RUN apt-get update
+RUN DEBIAN_FRONTEND="noninteractive" apt-get install apache2 -y && apt-get install mysql-server -y && apt-get install php -y
+ARG MYSQL_PASSWORD=abc!
+COPY start.sh /
+CMD start.sh
